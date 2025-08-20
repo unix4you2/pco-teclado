@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es" data-color-scheme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado Virtual Compacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Teclado Virtual</h1>
+            <p>Escribe usando el teclado en pantalla</p>
+        </header>
+
+        <!-- Layout Selector -->
+        <div class="layout-section">
+            <div class="card">
+                <div class="card__body">
+                    <label for="layoutSelector" class="form-label">Distribución del Teclado:</label>
+                    <div class="select-wrapper">
+                        <select id="layoutSelector" class="form-control select-dropdown">
+                            <option value="es" selected>Español Latinoamericano</option>
+                            <option value="en-us">English (US)</option>
+                            <option value="en-uk">English (UK)</option>
+                            <option value="fr">Français (AZERTY)</option>
+                            <option value="de">Deutsch (QWERTZ)</option>
+                            <option value="it">Italiano</option>
+                            <option value="pt-br">Português (Brasil)</option>
+                            <option value="ru">Русский</option>
+                            <option value="ar">العربية</option>
+                            <option value="ja">日本語 (Romaji)</option>
+                            <option value="ko">한국어 (Romaji)</option>
+                            <option value="zh">中文 (Pinyin)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Text Input -->
+        <div class="input-section">
+            <div class="card">
+                <div class="card__body">
+                    <label for="textInput" class="form-label">Campo de Texto:</label>
+                    <textarea id="textInput" class="form-control" rows="4" placeholder="Escribe aquí usando el teclado virtual..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Indicators -->
+        <div class="status-section">
+            <div class="flex justify-center gap-16">
+                <span class="status" id="shiftIndicator">Shift: OFF</span>
+                <span class="status" id="capsIndicator">Caps Lock: OFF</span>
+                <span class="status status--info" id="layoutIndicator">Layout: Español Latinoamericano</span>
+            </div>
+        </div>
+
+        <!-- Virtual Keyboard -->
+        <div class="keyboard-section">
+            <div class="card">
+                <div class="card__body">
+                    <div id="virtualKeyboard" class="virtual-keyboard">
+                        <!-- Keyboard will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-section">
+            <div class="card">
+                <div class="card__header">
+                    <h6>Instrucciones de Uso</h6>
+                </div>
+                <div class="card__body">
+                    <ul>
+                        <li>Selecciona una distribución de teclado del menú desplegable</li>
+                        <li><strong>Shift:</strong> Mayúsculas temporales (se desactiva después de una tecla)</li>
+                        <li><strong>Caps Lock:</strong> Mayúsculas permanentes (alterna on/off)</li>
+                        <li><strong>Limpiar:</strong> Borra todo el contenido</li>
+                        <li><strong>Copiar:</strong> Copia el texto al portapapeles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
