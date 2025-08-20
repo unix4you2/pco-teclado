@@ -937,7 +937,7 @@ select.form-control {
 
 /* Form styling */
 .form-control {
-    min-height: 100px;
+    min-height: 30px;
     resize: vertical;
     font-family: var(--font-family-base);
 }

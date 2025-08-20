@@ -461,7 +461,7 @@ function copyText() {
             const copyButton = document.querySelector('[data-key="Copiar"]');
             if (copyButton) {
                 const originalText = copyButton.textContent;
-                copyButton.textContent = '✓';
+                copyButton.textContent = '✓✓✓ OK';
                 setTimeout(() => {
                     copyButton.textContent = originalText;
                 }, 1000);
